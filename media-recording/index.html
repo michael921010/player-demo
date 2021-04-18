@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Recording</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row mb-4">
+            <div class="col-12">
+              <h1 class="text-center mb-3">
+                Use JavaScript to build a video recorder
+              </h1>
+              <p>
+                This demo demonstrates how to use the MediaStream API of the
+                browser to create the function of video recording
+                <small class="text-muted">
+                  （develope in Chrome browser）
+                </small>
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-5 justify-content-center align-items-center">
+            <div class="col-md-6 text-center">
+              <div
+                class="video-container d-flex align-items-center justify-content-center"
+              >
+                <div class="is-recording"></div>
+                <video id="inputVideo" alt="input-video" muted>
+                  Video stream not available.
+                </video>
+              </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+              <div
+                class="video-container d-flex align-items-center justify-content-center"
+              >
+                <video id="outputVideo" alt="output-video" muted>
+                  Video stream not available.
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4 justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <button id="startBtn" class="btn btn-sm btn-outline-primary">
+                Start Recording
+              </button>
+              <button
+                id="stopBtn"
+                class="btn btn-sm btn-outline-danger"
+                style="display: none"
+              >
+                Stop Recording
+              </button>
+              <button
+                id="resetBtn"
+                class="btn btn-sm btn-outline-info"
+                style="display: none"
+              >
+                Restart Recorder
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div role="alert" id="errorMsg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
