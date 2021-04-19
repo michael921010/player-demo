@@ -13,6 +13,7 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   </head>
   <body>
     <div class="container">
@@ -58,26 +59,38 @@
                   </video>
 
                   <div
-                    id="controls"
-                    class="p-1 position-absolute bottom-0 w-100 d-flex flex-row align-items-center justify-content-between"
+                    class="p-1 position-absolute bottom-0 w-100 d-flex flex-column"
                   >
-                    <div>
-                      <button class="player-btn" id="player-play">►</button>
-                      <input
-                        name="volume"
-                        type="range"
-                        class="player-sound"
-                        min="0"
-                        max="1"
-                        value="1"
-                        step="0.01"
-                      />
-                      <button class="player-btn" data-skip="-5">
-                        backward
-                      </button>
-                      <button class="player-btn" data-skip="5">forward</button>
+                    <div class="duration w-100 bg-secondary mb-2">
+                      <div
+                        class="real-time bg-primary h-100"
+                        style="width: 0px"
+                      ></div>
                     </div>
-                    <button class="player-btn fullscreen">全螢幕</button>
+                    <div
+                      id="controls"
+                      class="w-100 d-flex flex-row align-items-center justify-content-between"
+                    >
+                      <div>
+                        <button class="player-btn" id="player-play">►</button>
+                        <input
+                          name="volume"
+                          type="range"
+                          class="player-sound"
+                          min="0"
+                          max="1"
+                          value="1"
+                          step="0.01"
+                        />
+                        <button class="player-btn" data-skip="-5">
+                          backward
+                        </button>
+                        <button class="player-btn" data-skip="5">
+                          forward
+                        </button>
+                      </div>
+                      <button class="player-btn fullscreen">Full</button>
+                    </div>
                   </div>
                 </div>
               </div>

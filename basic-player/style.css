@@ -1,0 +1,8 @@
+.duration {
+  height: 5px;
+  cursor: pointer;
+}
+
+.real-time {
+  z-index: 1;
+}
