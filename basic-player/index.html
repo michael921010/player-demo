@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic player</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row mb-4">
+            <!-- caption -->
+            <div
+              class="d-flex flex-column align-items-center justify-content-center"
+            >
+              <h1 class="text-center mb-3">
+                Use JavaScript to build a video player
+              </h1>
+              <p>
+                This demo demonstrates how to use the MediaStream API of the
+                browser to create the function of video player
+                <small class="text-muted">
+                  （develope in Chrome browser）
+                </small>
+              </p>
+            </div>
+            <!-- player -->
+            <div
+              class="row mb-5 justify-content-center align-items-center w-100"
+            >
+              <div class="col-md-6 text-center">
+                <div
+                  id="myplayer"
+                  class="video-container d-flex flex-column align-items-center justify-content-center position-relative"
+                  width="800"
+                >
+                  <video
+                    id="video"
+                    alt="video"
+                    class="w-100"
+                    poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                  >
+                    <source
+                      src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                      type="video/mp4"
+                    />
+                    Video stream not available.
+                  </video>
+
+                  <div
+                    id="controls"
+                    class="p-1 position-absolute bottom-0 w-100 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <div>
+                      <button class="player-btn" id="player-play">►</button>
+                      <input
+                        name="volume"
+                        type="range"
+                        class="player-sound"
+                        min="0"
+                        max="1"
+                        value="1"
+                        step="0.01"
+                      />
+                      <button class="player-btn" data-skip="-5">
+                        backward
+                      </button>
+                      <button class="player-btn" data-skip="5">forward</button>
+                    </div>
+                    <button class="player-btn fullscreen">全螢幕</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
