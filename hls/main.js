@@ -1,3 +1,5 @@
+// hls.js https://github.com/video-dev/hls.js
+
 const url = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
 const video = document.getElementById("video");
 

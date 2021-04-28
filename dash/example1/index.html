@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DASH</title>
+    <!-- dash plugin -->
+    <script src="http://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <div class="container d-flex flex-row pt-3">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <video
+          id="video"
+          controls="true"
+          width="500px"
+          poster="http://mediapm.edgesuite.net/will/dash/temp/poster.png"
+        ></video>
+
+        <div>
+          <div class="d-flex flex-row align-items-center mt-3">
+            <strong>Reported bitrate: </strong>
+            <span id="reportedBitrate" class="mx-3"></span>
+          </div>
+
+          <div class="d-flex flex-row align-items-center mt-3">
+            <strong>Buffer level: </strong>
+            <span id="bufferLevel" class="mx-3"></span>
+          </div>
+
+          <div class="d-flex flex-row align-items-center mt-3">
+            <strong>Framerate: </strong>
+            <span id="framerate" class="mx-3"></span>
+          </div>
+
+          <div id="chrome-only" class="d-flex flex-row align-items-center mt-3">
+            <strong>Calculated bitrate: </strong>
+            <span id="calculatedBitrate" class="mx-3"></span>
+          </div>
+        </div>
+      </div>
+
+      <textarea
+        id="trace"
+        class="ml-3"
+        placeholder="Sent CMCD data will be displayed here"
+      ></textarea>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
