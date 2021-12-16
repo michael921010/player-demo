@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoly Muted Play</title>
+  </head>
+
+  <body>
+    <video id="video" muted autoplay loop playsinline style="display: none">
+      <source
+        src="https://opengameart.org/sites/default/files/audio_preview/swing_0.mp3.ogg"
+      />
+
+      <!-- <source src="./broken.mp3" /> -->
+    </video>
+
+    <audio id="audio" muted autoplay loop playsinline style="display: none">
+      <source src="./broken.mp3" />
+    </audio>
+
+    <button id="button">Unmuted</button>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
